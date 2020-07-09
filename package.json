@@ -63,5 +63,9 @@
     "rollup": "2.21.0",
     "rollup-plugin-auto-external": "2.0.0",
     "sinon": "9.0.2"
+  },
+  "dependencies": {
+    "@octokit/auth-token": "^2.4.2",
+    "netrc": "0.1.4"
   }
 }
