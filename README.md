@@ -19,8 +19,6 @@ netrc auth plugin for [Octokit](https://github.com/octokit/core.js)
     * [Authenticate](#authenticate)
   * [API](#api)
     * [`createNetrcAuth`](#createnetrcauth)
-    * [`auth()`](#auth)
-    * [Authentication object](#authentication-object)
 * [Contributing](#contributing)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
@@ -71,56 +69,10 @@ const auth = createNetrcAuth();
 
 #### `createNetrcAuth`
 
-Returns an [`auth()` function](#auth) after reading your token from the
-`~/.netrc` file. Throws an error with code `ENONETRCTOKEN` when an entry for
-`api.github.com` is not found in the `~/.netrc` file.
-
-#### `auth()`
-
-The `auth()` method has no options. It returns a promise which resolves with
-the [authentication object](#authentication-object).
-
-##### Authentication object
-
-<table width="100%">
-  <thead align=left>
-    <tr>
-      <th width=150>
-        name
-      </th>
-      <th width=70>
-        type
-      </th>
-      <th>
-        description
-      </th>
-    </tr>
-  </thead>
-  <tbody align=left valign=top>
-    <tr>
-      <th>
-        <code>type</code>
-      </th>
-      <th>
-        <code>string</code>
-      </th>
-      <td>
-        <code>"token"</code>
-      </td>
-    </tr>
-    <tr>
-      <th>
-        <code>token</code>
-      </th>
-      <th>
-        <code>string</code>
-      </th>
-      <td>
-        The provided token.
-      </td>
-    </tr>
-  </tbody>
-</table>
+Returns an [`auth()` function](https://github.com/octokit/auth-token.js#auth)
+after reading your token from the `~/.netrc` file. Throws an error with code
+`ENONETRCTOKEN` when an entry for `api.github.com` is not found in the
+`~/.netrc` file.
 
 ## Contributing
 
