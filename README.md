@@ -13,6 +13,7 @@ netrc auth plugin for [Octokit](https://github.com/octokit/core.js)
 
 * [Usage](#usage)
   * [Installation](#installation)
+  * [Defining your token](#defining-your-token)
   * [Example](#example)
     * [Import](#import)
     * [Authenticate](#authenticate)
@@ -40,20 +41,20 @@ netrc auth plugin for [Octokit](https://github.com/octokit/core.js)
 $ npm install octokit-auth-netrc --save-prod
 ```
 
+### Defining your token
+
+Add a [personal access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)
+to your [`~/.netrc` file](https://ec.haxx.se/usingcurl-netrc.html)
+
+    machine api.github.com
+      login <personal access token here>
+
 ### Example
 
 #### Import
 
 ```javascript
 import {createNetrcAuth} from 'octokit-auth-netrc';
-```
-
-```javascript
-  [`${process.env.HOME}/.netrc`]: `
-machine api.github.com
-  login asdflkajsdflkjadlfjalsdkfjalsdfja
-`
-});
 ```
 
 #### Authenticate
