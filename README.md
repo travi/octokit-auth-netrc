@@ -71,12 +71,12 @@ const auth = createNetrcAuth();
 
 #### `createNetrcAuth`
 
-returns an object with an [`auth()` method](#auth)
+returns an [`auth()` function](#auth) after reading your token from the `~/.netrc` file
 
 #### `auth()`
 
 The `auth()` method has no options. It returns a promise which resolves with
-the authentication object.
+the [authentication object](#authentication-object).
 
 #### Authentication object
 
