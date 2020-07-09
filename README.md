@@ -14,6 +14,10 @@ netrc auth plugin for [Octokit](https://github.com/octokit/core.js)
 * [Usage](#usage)
   * [Installation](#installation)
   * [Example](#example)
+  * [API](#api)
+    * [`createNetrcAuth`](#createnetrcauth)
+    * [`auth()`](#auth)
+    * [Authentication object](#authentication-object)
 * [Contributing](#contributing)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
@@ -37,8 +41,67 @@ $ npm install octokit-auth-netrc --save-prod
 ### Example
 
 ```javascript
-import octokitAuthNetrc from 'octokit-auth-netrc';
+import {createNetrcAuth} from 'octokit-auth-netrc';
+
+const auth = createNetrcAuth();
+
+(async () => {
+  await auth();
+})();
 ```
+
+### API
+
+#### `createNetrcAuth`
+
+returns an object with an [`auth()` method](#auth)
+
+#### `auth()`
+
+The `auth()` method has no options. It returns a promise which resolves with
+the authentication object.
+
+#### Authentication object
+
+<table width="100%">
+  <thead align=left>
+    <tr>
+      <th width=150>
+        name
+      </th>
+      <th width=70>
+        type
+      </th>
+      <th>
+        description
+      </th>
+    </tr>
+  </thead>
+  <tbody align=left valign=top>
+    <tr>
+      <th>
+        <code>type</code>
+      </th>
+      <th>
+        <code>string</code>
+      </th>
+      <td>
+        <code>"token"</code>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <code>token</code>
+      </th>
+      <th>
+        <code>string</code>
+      </th>
+      <td>
+        The provided token.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Contributing
 
