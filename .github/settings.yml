@@ -1,0 +1,6 @@
+_extends: .github
+repository:
+  name: octokit-auth-netrc
+  description: netrc auth plugin for Octokit
+  homepage: 'https://npm.im/octokit-auth-netrc'
+  private: false
