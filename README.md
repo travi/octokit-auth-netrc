@@ -14,6 +14,8 @@ netrc auth plugin for [Octokit](https://github.com/octokit/core.js)
 * [Usage](#usage)
   * [Installation](#installation)
   * [Example](#example)
+    * [Import](#import)
+    * [Authenticate](#authenticate)
   * [API](#api)
     * [`createNetrcAuth`](#createnetrcauth)
     * [`auth()`](#auth)
@@ -40,9 +42,23 @@ $ npm install octokit-auth-netrc --save-prod
 
 ### Example
 
+#### Import
+
 ```javascript
 import {createNetrcAuth} from 'octokit-auth-netrc';
+```
 
+```javascript
+  [`${process.env.HOME}/.netrc`]: `
+machine api.github.com
+  login asdflkajsdflkjadlfjalsdkfjalsdfja
+`
+});
+```
+
+#### Authenticate
+
+```javascript
 const auth = createNetrcAuth();
 
 (async () => {
