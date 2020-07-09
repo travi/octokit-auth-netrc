@@ -71,14 +71,16 @@ const auth = createNetrcAuth();
 
 #### `createNetrcAuth`
 
-returns an [`auth()` function](#auth) after reading your token from the `~/.netrc` file
+Returns an [`auth()` function](#auth) after reading your token from the
+`~/.netrc` file. Throws an error with code `ENONETRCTOKEN` when an entry for
+`api.github.com` is not found in the `~/.netrc` file.
 
 #### `auth()`
 
 The `auth()` method has no options. It returns a promise which resolves with
 the [authentication object](#authentication-object).
 
-#### Authentication object
+##### Authentication object
 
 <table width="100%">
   <thead align=left>
