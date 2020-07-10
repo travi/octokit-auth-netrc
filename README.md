@@ -13,7 +13,12 @@ netrc auth plugin for [Octokit](https://github.com/octokit/core.js)
 
 * [Usage](#usage)
   * [Installation](#installation)
+  * [Defining your token](#defining-your-token)
   * [Example](#example)
+    * [Import](#import)
+    * [Authenticate](#authenticate)
+  * [API](#api)
+    * [`createNetrcAuth`](#createnetrcauth)
 * [Contributing](#contributing)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
@@ -34,11 +39,40 @@ netrc auth plugin for [Octokit](https://github.com/octokit/core.js)
 $ npm install octokit-auth-netrc --save-prod
 ```
 
+### Defining your token
+
+Add a [personal access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)
+to your [`~/.netrc` file](https://ec.haxx.se/usingcurl-netrc.html)
+
+    machine api.github.com
+      login <personal access token here>
+
 ### Example
 
+#### Import
+
 ```javascript
-import octokitAuthNetrc from 'octokit-auth-netrc';
+import {createNetrcAuth} from 'octokit-auth-netrc';
 ```
+
+#### Authenticate
+
+```javascript
+const auth = createNetrcAuth();
+
+(async () => {
+  await auth();
+})();
+```
+
+### API
+
+#### `createNetrcAuth`
+
+Returns an [`auth()` function](https://github.com/octokit/auth-token.js#auth)
+after reading your token from the `~/.netrc` file. Throws an error with code
+`ENONETRCTOKEN` when an entry for `api.github.com` is not found in the
+`~/.netrc` file.
 
 ## Contributing
 
