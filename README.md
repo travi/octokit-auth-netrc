@@ -1,6 +1,7 @@
 # octokit-auth-netrc
 
-netrc auth plugin for [Octokit](https://github.com/octokit/core.js)
+[.netrc](https://ec.haxx.se/usingcurl/usingcurl-netrc) auth plugin for
+[Octokit](https://github.com/octokit/core.js)
 
 <!--status-badges start -->
 
