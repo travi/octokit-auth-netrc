@@ -16,6 +16,8 @@ Before(function () {
 After(() => {
   nock.enableNetConnect();
   nock.cleanAll();
+
+  assert.isTrue(githubScope.isDone());
 });
 
 Given('a personal access token is defined for api.github.com', async function () {
