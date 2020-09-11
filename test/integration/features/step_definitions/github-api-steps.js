@@ -1,5 +1,5 @@
 import nock from 'nock';
-import {OK} from 'http-status-codes';
+import {StatusCodes} from 'http-status-codes';
 import {After, Before, Given, Then} from 'cucumber';
 import any from '@travi/any';
 import {assert} from 'chai';
@@ -26,7 +26,7 @@ Given('a personal access token is defined for api.github.com', async function ()
   githubScope
     .matchHeader('Authorization', `token ${this.personalAccessToken}`)
     .get('/user')
-    .reply(OK, user);
+    .reply(StatusCodes.OK, user);
 });
 
 Then('the user is returned', async function () {
