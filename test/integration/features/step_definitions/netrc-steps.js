@@ -6,6 +6,7 @@ import stubbedFs from 'mock-fs';
 import {assert} from 'chai';
 
 let netrcExists;
+const debug = require('debug')('test');
 
 After(function () {
   stubbedFs.restore();
@@ -39,6 +40,7 @@ machine api.github.com
 
     this.result = await octokit.request('GET /user');
   } catch (e) {
+    debug(e);
     this.result = e;
   }
 });
