@@ -46,7 +46,7 @@
     "test:integration:focus": "run-s 'test:integration:base -- --profile focus'"
   },
   "devDependencies": {
-    "@babel/register": "7.12.10",
+    "@babel/register": "7.12.13",
     "@octokit/core": "3.2.5",
     "@travi/any": "2.0.15",
     "@travi/babel-preset": "3.0.38",
