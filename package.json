@@ -81,7 +81,7 @@
     "sinon": "10.0.0"
   },
   "dependencies": {
-    "@octokit/auth-token": "^2.4.2",
+    "@octokit/auth-token": "^2.4.4",
     "netrc": "0.1.4"
   }
 }
