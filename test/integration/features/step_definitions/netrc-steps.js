@@ -1,7 +1,7 @@
 import {Octokit} from '@octokit/core';
 // eslint-disable-next-line import/no-extraneous-dependencies,import/no-unresolved
 import {createNetrcAuth} from 'octokit-auth-netrc';
-import {After, Given, Then, When} from 'cucumber';
+import {After, Given, Then, When} from '@cucumber/cucumber';
 import stubbedFs from 'mock-fs';
 import {assert} from 'chai';
 

@@ -1,6 +1,6 @@
 import nock from 'nock';
 import {StatusCodes} from 'http-status-codes';
-import {After, Before, Given, Then} from 'cucumber';
+import {After, Before, Given, Then} from '@cucumber/cucumber';
 import any from '@travi/any';
 import {assert} from 'chai';
 
