@@ -46,7 +46,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@babel/register": "7.14.5",
+    "@babel/register": "7.15.3",
     "@cucumber/cucumber": "7.3.1",
     "@octokit/core": "3.5.1",
     "@travi/any": "2.0.17",
