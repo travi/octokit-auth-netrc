@@ -21,7 +21,7 @@ After(() => {
 });
 
 Given('a personal access token is defined for api.github.com', async function () {
-  this.personalAccessToken = any.string();
+  this.personalAccessToken = any.word();
 
   githubScope
     .matchHeader('Authorization', `token ${this.personalAccessToken}`)
