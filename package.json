@@ -3,6 +3,9 @@
   "description": "netrc auth plugin for Octokit",
   "license": "MIT",
   "version": "0.0.0-semantically-released",
+  "engines": {
+    "node": "^14.15 || >=16"
+  },
   "files": [
     "example.js",
     "lib/"
