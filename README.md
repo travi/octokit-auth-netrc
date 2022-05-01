@@ -31,6 +31,7 @@
 [![MIT license][license-badge]][license-link]
 [![npm][npm-badge]][npm-link]
 [![Try octokit-auth-netrc on RunKit][runkit-badge]][runkit-link]
+![node][node-badge]
 
 <!--consumer-badges end -->
 
@@ -139,3 +140,5 @@ $ npm test
 [github-actions-ci-link]: https://github.com/travi/octokit-auth-netrc/actions?query=workflow%3A%22Node.js+CI%22+branch%3Amaster
 
 [github-actions-ci-badge]: https://github.com/travi/octokit-auth-netrc/workflows/Node.js%20CI/badge.svg
+
+[node-badge]: https://img.shields.io/node/v/octokit-auth-netrc?logo=node.js
