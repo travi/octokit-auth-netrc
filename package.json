@@ -6,23 +6,16 @@
   "engines": {
     "node": "^14.15 || >=16"
   },
-  "files": [
-    "example.js",
-    "lib/"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
+  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
+  "repository": "travi/octokit-auth-netrc",
+  "bugs": "https://github.com/travi/octokit-auth-netrc/issues",
+  "homepage": "https://npm.im/octokit-auth-netrc",
   "runkitExampleFilename": "./example.js",
   "main": "lib/index.cjs.js",
   "module": "lib/index.es.js",
   "sideEffects": false,
-  "repository": "travi/octokit-auth-netrc",
-  "bugs": "https://github.com/travi/octokit-auth-netrc/issues",
-  "homepage": "https://npm.im/octokit-auth-netrc",
-  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "scripts": {
-    "test": "npm-run-all --print-label build --parallel lint:* --parallel test:*",
+    "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
     "lint:lockfile": "lockfile-lint --path package-lock.json --type npm --validate-https --allowed-hosts npm",
     "lint:js": "eslint . --cache",
     "lint:md": "remark . --frail",
@@ -47,6 +40,17 @@
     "test:integration:focus": "run-s 'test:integration:base -- --profile focus'",
     "prepare": "husky install",
     "lint:engines": "ls-engines"
+  },
+  "files": [
+    "example.js",
+    "lib/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@octokit/auth-token": "^3.0.0",
+    "netrc": "0.1.4"
   },
   "devDependencies": {
     "@babel/register": "7.18.9",
@@ -82,9 +86,5 @@
     "rollup": "2.79.1",
     "rollup-plugin-auto-external": "2.0.0",
     "sinon": "14.0.1"
-  },
-  "dependencies": {
-    "@octokit/auth-token": "^3.0.0",
-    "netrc": "0.1.4"
   }
 }
