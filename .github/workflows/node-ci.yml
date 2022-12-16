@@ -20,7 +20,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: npm
       - run: npm clean-install
       - run: npm test
@@ -38,25 +38,14 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
           cache: npm
+          node-version: ${{ matrix.node }}
       - run: npm clean-install
       - run: npm test
-  trigger-release:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push'
+  release:
     needs:
       - verify
       - verify-matrix
-    steps:
-      - uses: octokit/request-action@v2.x
-        with:
-          route: >-
-            POST
-            /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches
-          owner: travi
-          repo: octokit-auth-netrc
-          ref: ${{ github.ref }}
-          workflow_id: release.yml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+    uses: form8ion/.github/.github/workflows/release-package.yml@master
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
