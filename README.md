@@ -49,6 +49,10 @@ to your [`~/.netrc` file](https://ec.haxx.se/usingcurl-netrc.html)
     machine api.github.com
       login <personal access token here>
 
+    machine github.acme-inc.com
+      login <personal access token here>
+
+
 ### Example
 
 #### Import
@@ -60,7 +64,14 @@ import {createNetrcAuth} from 'octokit-auth-netrc';
 #### Authenticate
 
 ```javascript
-const auth = createNetrcAuth();
+const auth = createNetrcAuth(); // defaults to api.github.com
+
+(async () => {
+  await auth();
+})();
+
+// For use with GHES, override the default domain
+const auth = createNetrcAuth({ domain: 'github.acme-inc.com' });
 
 (async () => {
   await auth();
