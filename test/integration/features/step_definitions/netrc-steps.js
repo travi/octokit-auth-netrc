@@ -6,12 +6,14 @@ import stubbedFs from 'mock-fs';
 import {assert} from 'chai';
 
 let netrcExists;
+let ghDomain = 'api.github.com';
 const debug = require('debug')('test');
 
 After(function () {
   stubbedFs.restore();
 
   netrcExists = null;
+  ghDomain = 'api.github.com';
 });
 
 Given('no netrc file exists', async function () {
@@ -22,30 +24,45 @@ Given('the netrc file exists', async function () {
   netrcExists = true;
 });
 
-When('the user account is requested', async function () {
+const setupNetrcEntry = async context => {
   stubbedFs({
     ...netrcExists && {
-      [`${process.env.HOME}/.netrc`]: this.personalAccessToken
+      [`${process.env.HOME}/.netrc`]: context.personalAccessToken
         ? `
-machine api.github.com
-  login ${(this.personalAccessToken)}
+machine ${ghDomain}
+  login ${(context.personalAccessToken)}
 `
         : ''
     }
   });
-  const OctokitWithNetrcAuth = Octokit.defaults({authStrategy: createNetrcAuth});
+
+  const isGHES = 'api.github.com' !== ghDomain;
+  const authStrategy = isGHES ? () => createNetrcAuth({domain: ghDomain}) : createNetrcAuth;
+  const OctokitWithNetrcAuth = Octokit.defaults({
+    authStrategy,
+    baseUrl: isGHES ? `https://${ghDomain}` : null
+  });
 
   try {
     const octokit = new OctokitWithNetrcAuth();
 
-    this.result = await octokit.request('GET /user');
+    context.result = await octokit.request('GET /user');
   } catch (e) {
     debug(e);
-    this.result = e;
+    context.result = e;
   }
+};
+When('the user account is requested', async function () {
+  await setupNetrcEntry(this);
+});
+
+When('the user account is requested for {string}', async function (domain) {
+  ghDomain = domain;
+
+  await setupNetrcEntry(this);
 });
 
 Then('a missing-token error is thrown', async function () {
   assert.equal(this.result.code, 'ENONETRCTOKEN');
-  assert.equal(this.result.message, 'No entry was found for `api.github.com` in your `~/.netrc` file');
+  assert.equal(this.result.message, `No entry was found for \`${ghDomain}\` in your \`~/.netrc\` file`);
 });
