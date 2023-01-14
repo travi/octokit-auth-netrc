@@ -109,7 +109,7 @@ $ npm install
 ### Verification
 
 ```sh
-$ npm test
+$ NODE_OPTIONS=--no-experimental-fetch npm test
 ```
 
 [PRs-link]: http://makeapullrequest.com
