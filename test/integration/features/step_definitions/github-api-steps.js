@@ -20,8 +20,9 @@ After(() => {
   assert.isTrue(githubScope.isDone());
 });
 
-Given('a personal access token is defined for api.github.com', async function () {
+Given('a personal access token is defined for {string}', async function (domain) {
   this.personalAccessToken = any.word();
+  githubScope = nock(`https://${domain}/`);
 
   githubScope
     .matchHeader('Authorization', `token ${this.personalAccessToken}`)
