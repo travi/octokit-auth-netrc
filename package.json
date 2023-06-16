@@ -15,7 +15,8 @@
   "module": "lib/index.es.js",
   "sideEffects": false,
   "scripts": {
-    "test": "npm-run-all --print-label build --parallel lint:* --parallel test:*",
+    "pretest": "run-s build",
+    "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
     "lint:lockfile": "lockfile-lint --path package-lock.json --type npm --validate-https --allowed-hosts npm",
     "lint:js": "eslint . --cache",
     "lint:md": "remark . --frail",
