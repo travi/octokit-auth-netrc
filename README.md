@@ -7,6 +7,7 @@
 
 [![Codecov][coverage-badge]][coverage-link]
 [![Node CI Workflow Status][github-actions-ci-badge]][github-actions-ci-link]
+[![OpenSSF Scorecard][ossfScorecard-badge]][ossfScorecard-link]
 
 <!--status-badges end -->
 
@@ -150,3 +151,7 @@ $ NODE_OPTIONS=--no-experimental-fetch npm test
 [github-actions-ci-badge]: https://github.com/travi/octokit-auth-netrc/workflows/Node.js%20CI/badge.svg
 
 [node-badge]: https://img.shields.io/node/v/octokit-auth-netrc?logo=node.js
+
+[ossfScorecard-link]: https://api.securityscorecards.dev/projects/github.com/travi/octokit-auth-netrc
+
+[ossfScorecard-badge]: https://api.securityscorecards.dev/projects/github.com/travi/octokit-auth-netrc/badge
