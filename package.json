@@ -51,7 +51,7 @@
     "provenance": true
   },
   "dependencies": {
-    "@octokit/auth-token": "^3.0.0",
+    "@octokit/auth-token": "^4.0.0",
     "netrc": "0.1.4"
   },
   "devDependencies": {
