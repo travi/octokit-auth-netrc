@@ -152,6 +152,6 @@ $ NODE_OPTIONS=--no-experimental-fetch npm test
 
 [node-badge]: https://img.shields.io/node/v/octokit-auth-netrc?logo=node.js
 
-[ossfScorecard-link]: https://api.securityscorecards.dev/projects/github.com/travi/octokit-auth-netrc
+[ossfScorecard-link]: https://securityscorecards.dev/viewer/?uri=github.com/travi/octokit-auth-netrc
 
 [ossfScorecard-badge]: https://api.securityscorecards.dev/projects/github.com/travi/octokit-auth-netrc/badge
