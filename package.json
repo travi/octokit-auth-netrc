@@ -60,7 +60,7 @@
     "@octokit/core": "4.2.4",
     "@travi/any": "2.1.8",
     "@travi/babel-preset": "3.0.101",
-    "@travi/eslint-config": "3.0.32",
+    "@travi/eslint-config": "3.0.33",
     "@travi/eslint-config-cucumber": "1.0.6",
     "@travi/eslint-config-mocha": "1.0.19",
     "ban-sensitive-files": "1.9.19",
