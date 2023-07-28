@@ -18,7 +18,7 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
       - name: Setup node
         uses: actions/setup-node@bea5baf987ba7aa777a8a0b4ace377a21c45c381 # v3.8.0
         with:
@@ -40,7 +40,7 @@ jobs:
           - node: 18
             options: '--no-experimental-fetch'
     steps:
-      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
       - name: Setup node
         uses: actions/setup-node@bea5baf987ba7aa777a8a0b4ace377a21c45c381 # v3.8.0
         with:
