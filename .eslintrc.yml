@@ -3,6 +3,11 @@ extends:
   - '@travi/mocha'
   - '@travi/cucumber'
 
+rules:
+  import/extensions:
+    - error
+    - ignorePackages
+
 overrides:
   - files: example.js
     rules:
