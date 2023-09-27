@@ -1,7 +1,7 @@
 // #### Import
 // remark-usage-ignore-next
 import stubbedFs from 'mock-fs';
-import {createNetrcAuth} from './lib/index.cjs.js';
+import {createNetrcAuth} from './lib/index.cjs';
 
 // remark-usage-ignore-next 8
 stubbedFs({

@@ -2,8 +2,8 @@ import * as octokitAuthToken from '@octokit/auth-token';
 import {assert} from 'chai';
 import sinon from 'sinon';
 import any from '@travi/any';
-import * as netrc from '../thirdparty-wrappers/netrc.js';
-import createNetrcAuth from './netrc-auth.js';
+import * as netrc from '../thirdparty-wrappers/netrc';
+import createNetrcAuth from './netrc-auth';
 
 suite('createNetrcAuth auth', () => {
   let sandbox;
