@@ -1,1 +1,1 @@
-export {default as createNetrcAuth} from './netrc-auth';
+export {default as createNetrcAuth} from './netrc-auth.js';
