@@ -59,7 +59,7 @@
     "@cucumber/cucumber": "9.6.0",
     "@octokit/core": "4.2.4",
     "@travi/any": "3.0.0",
-    "@travi/babel-preset": "3.0.112",
+    "@travi/babel-preset": "3.0.113",
     "@travi/eslint-config": "5.0.0",
     "@travi/eslint-config-cucumber": "1.0.6",
     "@travi/eslint-config-mocha": "1.0.21",
