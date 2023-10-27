@@ -47,11 +47,13 @@ $ npm install octokit-auth-netrc --save-prod
 Add a [personal access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)
 to your [`~/.netrc` file](https://ec.haxx.se/usingcurl-netrc.html)
 
-    machine api.github.com
-      login <personal access token here>
+```
+machine api.github.com
+  login <personal access token here>
 
-    machine github.acme-inc.com
-      login <personal access token here>
+machine github.acme-inc.com
+  login <personal access token here>
+```
 
 ### Example
 
