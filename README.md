@@ -135,7 +135,7 @@ $ NODE_OPTIONS=--no-experimental-fetch npm test
 
 [coverage-link]: https://codecov.io/github/travi/octokit-auth-netrc
 
-[coverage-badge]: https://img.shields.io/codecov/c/github/travi/octokit-auth-netrc.svg
+[coverage-badge]: https://img.shields.io/codecov/c/github/travi/octokit-auth-netrc?logo=codecov
 
 [license-link]: LICENSE
 
@@ -143,7 +143,7 @@ $ NODE_OPTIONS=--no-experimental-fetch npm test
 
 [npm-link]: https://www.npmjs.com/package/octokit-auth-netrc
 
-[npm-badge]: https://img.shields.io/npm/v/octokit-auth-netrc.svg
+[npm-badge]: https://img.shields.io/npm/v/octokit-auth-netrc?logo=npm
 
 [runkit-link]: https://npm.runkit.com/octokit-auth-netrc
 
