@@ -8,6 +8,7 @@
 [![Codecov][coverage-badge]][coverage-link]
 [![Node CI Workflow Status][github-actions-ci-badge]][github-actions-ci-link]
 [![OpenSSF Scorecard][ossfScorecard-badge]][ossfScorecard-link]
+![SLSA Level 2][slsa-badge]
 
 <!--status-badges end -->
 
@@ -157,3 +158,5 @@ $ NODE_OPTIONS=--no-experimental-fetch npm test
 [ossfScorecard-link]: https://securityscorecards.dev/viewer/?uri=github.com/travi/octokit-auth-netrc
 
 [ossfScorecard-badge]: https://api.securityscorecards.dev/projects/github.com/travi/octokit-auth-netrc/badge
+
+[slsa-badge]: https://slsa.dev/images/gh-badge-level2.svg
