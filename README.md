@@ -151,7 +151,7 @@ $ NODE_OPTIONS=--no-experimental-fetch npm test
 
 [github-actions-ci-link]: https://github.com/travi/octokit-auth-netrc/actions?query=workflow%3A%22Node.js+CI%22+branch%3Amaster
 
-[github-actions-ci-badge]: https://github.com/travi/octokit-auth-netrc/workflows/Node.js%20CI/badge.svg
+[github-actions-ci-badge]: https://img.shields.io/github/actions/workflow/status/travi/octokit-auth-netrc/node-ci.yml.svg?branch=master&logo=github
 
 [node-badge]: https://img.shields.io/node/v/octokit-auth-netrc?logo=node.js
 
