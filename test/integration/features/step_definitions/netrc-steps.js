@@ -5,9 +5,11 @@ import {After, Given, Then, When} from '@cucumber/cucumber';
 import stubbedFs from 'mock-fs';
 import {assert} from 'chai';
 
+import testDebug from 'debug';
+
 let netrcExists;
 let ghDomain = 'api.github.com';
-const debug = require('debug')('test');
+const debug = testDebug('test');
 
 After(function () {
   stubbedFs.restore();

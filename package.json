@@ -3,6 +3,7 @@
   "description": "netrc auth plugin for Octokit",
   "license": "MIT",
   "version": "0.0.0-semantically-released",
+  "type": "module",
   "engines": {
     "node": "^18.17"
   },
@@ -11,8 +12,8 @@
   "bugs": "https://github.com/travi/octokit-auth-netrc/issues",
   "homepage": "https://npm.im/octokit-auth-netrc",
   "runkitExampleFilename": "./example.js",
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.es.js",
+  "main": "./lib/index.js",
+  "exports": "./lib/index.js",
   "sideEffects": false,
   "scripts": {
     "pretest": "run-s build",
@@ -33,14 +34,15 @@
     "test:unit:base": "DEBUG=any vitest run",
     "lint:peer": "npm ls >/dev/null",
     "lint:gherkin": "gherkin-lint",
-    "pretest:integration": "preview",
+    "pretest:integration": "run-s build",
     "test:integration": "run-s 'test:integration:base -- --profile noWip'",
-    "test:integration:base": "DEBUG=any NODE_OPTIONS=--no-experimental-fetch cucumber-js test/integration --profile base",
+    "test:integration:base": "DEBUG=any NODE_OPTIONS=--no-experimental-fetch cucumber-js test/integration",
     "test:integration:debug": "DEBUG=test run-s test:integration",
     "test:integration:wip": "run-s 'test:integration:base -- --profile wip'",
     "test:integration:focus": "run-s 'test:integration:base -- --profile focus'",
     "prepare": "husky install",
-    "lint:engines": "ls-engines"
+    "lint:engines": "ls-engines",
+    "lint:publish": "publint --strict"
   },
   "files": [
     "example.js",
@@ -55,11 +57,9 @@
     "netrc": "0.1.4"
   },
   "devDependencies": {
-    "@babel/register": "7.22.15",
     "@cucumber/cucumber": "9.6.0",
     "@octokit/core": "4.2.4",
     "@travi/any": "3.0.1",
-    "@travi/babel-preset": "3.0.113",
     "@travi/eslint-config": "5.0.2",
     "@travi/eslint-config-cucumber": "1.0.6",
     "ban-sensitive-files": "1.10.1",
@@ -78,7 +78,7 @@
     "mock-fs": "5.2.0",
     "nock": "13.3.6",
     "npm-run-all2": "6.1.1",
-    "package-preview": "4.0.0",
+    "publint": "0.2.5",
     "remark-cli": "11.0.0",
     "remark-preset-lint-travi": "6.0.1",
     "remark-toc": "9.0.0",
