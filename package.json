@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@cucumber/cucumber": "10.3.1",
-    "@octokit/core": "5.0.2",
+    "@octokit/core": "5.1.0",
     "@travi/any": "3.0.2",
     "@travi/eslint-config": "5.0.7",
     "@travi/eslint-config-cucumber": "1.0.6",
