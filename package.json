@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "@octokit/auth-token": "^5.0.0",
-    "netrc": "0.1.4"
+    "@travi/netrc": "^1.0.0"
   },
   "devDependencies": {
     "@cucumber/cucumber": "10.8.0",

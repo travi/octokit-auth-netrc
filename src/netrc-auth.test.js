@@ -1,5 +1,5 @@
 import {createTokenAuth} from '@octokit/auth-token';
-import netrc from 'netrc';
+import netrc from '@travi/netrc';
 
 import {afterEach, describe, it, expect, vi} from 'vitest';
 import any from '@travi/any';
@@ -7,7 +7,7 @@ import {when} from 'jest-when';
 
 import createNetrcAuth from './netrc-auth.js';
 
-vi.mock('netrc');
+vi.mock('@travi/netrc');
 vi.mock('@octokit/auth-token');
 
 describe('createNetrcAuth auth', () => {

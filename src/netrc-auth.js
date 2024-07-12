@@ -1,5 +1,5 @@
 import {createTokenAuth} from '@octokit/auth-token';
-import netrc from 'netrc';
+import netrc from '@travi/netrc';
 
 export default function ({domain = 'api.github.com'} = {}) {
   const githubCredentials = netrc()[domain];
