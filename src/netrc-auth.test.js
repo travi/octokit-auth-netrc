@@ -3,7 +3,7 @@ import netrc from '@travi/netrc';
 
 import {afterEach, describe, it, expect, vi} from 'vitest';
 import any from '@travi/any';
-import {when} from 'jest-when';
+import {when} from 'vitest-when';
 
 import createNetrcAuth from './netrc-auth.js';
 
@@ -19,7 +19,7 @@ describe('createNetrcAuth auth', () => {
     const token = any.string();
     const createTokenAuthResult = any.simpleObject();
     netrc.mockReturnValue({...any.simpleObject(), [domain]: {login: token}});
-    when(createTokenAuth).calledWith(token).mockReturnValue(createTokenAuthResult);
+    when(createTokenAuth).calledWith(token).thenReturn(createTokenAuthResult);
 
     expect(createAuth()).toEqual(createTokenAuthResult);
   };

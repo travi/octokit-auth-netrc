@@ -7,3 +7,4 @@ rules:
     - 'error'
     - ignore:
         - '@octokit/auth-token'
+        - 'vitest-when'
