@@ -42,7 +42,8 @@
     "test:integration:focus": "run-s 'test:integration:base -- --profile focus'",
     "prepare": "husky install",
     "lint:engines": "ls-engines",
-    "lint:publish": "publint --strict"
+    "lint:publish": "publint --strict",
+    "lint:js:fix": "run-s 'lint:js -- --fix'"
   },
   "files": [
     "example.js",
