@@ -139,7 +139,7 @@ $ NODE_OPTIONS=--no-experimental-fetch npm test
 
 [license-link]: LICENSE
 
-[license-badge]: https://img.shields.io/github/license/travi/octokit-auth-netrc.svg
+[license-badge]: https://img.shields.io/github/license/travi/octokit-auth-netrc.svg?logo=opensourceinitiative
 
 [npm-link]: https://www.npmjs.com/package/octokit-auth-netrc
 
