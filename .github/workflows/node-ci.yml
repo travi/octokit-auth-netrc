@@ -48,7 +48,6 @@ jobs:
     needs:
       - verify
       - verify-matrix
-      - release
     permissions:
       contents: write
       id-token: write
@@ -62,6 +61,7 @@ jobs:
     needs:
       - verify
       - verify-matrix
+      - release
     if: ${{ !cancelled() }}
     steps:
       - name: All matrix versions passed
