@@ -5,7 +5,7 @@
   "version": "0.0.0-semantically-released",
   "type": "module",
   "engines": {
-    "node": "^18.17 || >=20.6.1"
+    "node": "^20.19.0 || >=22.14.0"
   },
   "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "repository": "travi/octokit-auth-netrc",
@@ -55,12 +55,12 @@
   },
   "packageManager": "npm@11.8.0+sha512.9f5f6c25e5be44629d907a3c482739c614b090a8505057d9685cd273e12c6172e34aa215d2d97bd9a0d8415bb356f7eb6f2b06c1d690b0d2cdcb9f09d7410149",
   "dependencies": {
-    "@octokit/auth-token": "^5.0.0",
+    "@octokit/auth-token": "^6.0.0",
     "@travi/netrc": "^1.0.0"
   },
   "devDependencies": {
     "@cucumber/cucumber": "11.3.0",
-    "@octokit/core": "6.1.6",
+    "@octokit/core": "7.0.6",
     "@travi/any": "3.1.3",
     "@travi/eslint-config": "5.0.12",
     "@travi/eslint-config-cucumber": "1.0.6",
