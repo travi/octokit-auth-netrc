@@ -49,6 +49,7 @@ jobs:
     needs:
       - verify
       - verify-matrix
+      - release
     permissions:
       contents: write
       id-token: write
