@@ -67,7 +67,7 @@
     "ban-sensitive-files": "1.10.11",
     "c8": "11.0.0",
     "chai": "6.2.2",
-    "commitlint-config-travi": "1.4.61",
+    "commitlint-config-travi": "1.4.62",
     "cross-env": "10.1.0",
     "cz-conventional-changelog": "3.3.0",
     "debug": "4.4.3",
