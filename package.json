@@ -59,7 +59,7 @@
     "@travi/netrc": "^1.0.0"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "12.8.1",
+    "@cucumber/cucumber": "12.8.2",
     "@octokit/core": "7.0.6",
     "@travi/any": "3.3.0",
     "@travi/eslint-config": "5.0.13",
